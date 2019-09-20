@@ -12,6 +12,7 @@ public class h08_1 extends Applet {
     TextField tekstvak;
     Label label;
 
+
     public void init(){
         setSize(500, 200);
         label = new Label("Search");
@@ -33,7 +34,7 @@ public class h08_1 extends Applet {
 
     class OkKnopListener implements ActionListener{
         public void actionPerformed( ActionEvent e ) {
-            tekstvak.setText("Sorry, try again");
+
             repaint();
         }
     }
