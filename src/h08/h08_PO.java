@@ -68,7 +68,7 @@ public class h08_PO extends Applet {
         public void actionPerformed(ActionEvent e){
             String s = tekstvak1.getText();
             int input = Integer.parseInt(s);
-            int input2 = Integer.parseInt(tekstvak1.getText());
+            int input2 = Integer.parseInt(tekstvak2.getText());
             int antwoord = input - input2;
             tekstvak1.setText("" + antwoord);
             tekstvak2.setText("");
@@ -79,7 +79,7 @@ public class h08_PO extends Applet {
         public void actionPerformed(ActionEvent e){
             String s = tekstvak1.getText();
             int input = Integer.parseInt(s);
-            int input2 = Integer.parseInt(tekstvak1.getText());
+            int input2 = Integer.parseInt(tekstvak2.getText());
             int antwoord = input + input2;
             tekstvak1.setText("" + antwoord);
             tekstvak2.setText("");
@@ -90,8 +90,8 @@ public class h08_PO extends Applet {
         public void actionPerformed(ActionEvent e){
             String s = tekstvak1.getText();
             int input = Integer.parseInt(s);
-            int input2 = Integer.parseInt(tekstvak1.getText());
-            int antwoord = input / input2;
+            int input2 = Integer.parseInt(tekstvak2.getText());
+            int antwoord = input/input2;
             tekstvak1.setText("" + antwoord);
             tekstvak2.setText("");
         }
