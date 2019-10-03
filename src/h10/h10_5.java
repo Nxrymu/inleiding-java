@@ -15,7 +15,7 @@ public class h10_5 extends Applet {
     double cijfer;
     double totaal;
     int aantal;
-    Boolean okGeklikt;
+    Boolean geklikt;
 
     public void init(){
 
@@ -31,7 +31,7 @@ public class h10_5 extends Applet {
         tekstvak = new TextField("",20);
         tekstvak.addActionListener(new TekstvakListener());
         welniet = "";
-        okGeklikt = false;
+        geklikt = false;
         //-------------------
         add(label);
         add(tekstvak);
@@ -41,9 +41,9 @@ public class h10_5 extends Applet {
     public void paint(Graphics g){
 
         g.drawString("Cijfer " + cijfer + " is " + uitslag,50,90);
-        if (okGeklikt==true){
+        if (geklikt==true){
             g.drawString("Het gemmiddelde cijfer is" +  ( totaal/aantal ),50,110);
-            g.drawString("Student is " + welniet + " geslaagd", 50, 130 );
+            g.drawString("De student is " + welniet + " geslaagd", 50, 130 );
         }
 
 
@@ -52,7 +52,7 @@ public class h10_5 extends Applet {
 
     public class OkKnopListener implements ActionListener{
         public void actionPerformed(ActionEvent e){
-            okGeklikt = true;
+            geklikt = true;
 
             double gemiddelde = totaal/aantal;
             if (gemiddelde<5.5){
@@ -67,7 +67,7 @@ public class h10_5 extends Applet {
 
     public class TekstvakListener implements ActionListener{
         public void actionPerformed(ActionEvent e){
-            okGeklikt = false;
+            geklikt = false;
             cijfer = Double.parseDouble(tekstvak.getText());
             if (cijfer<5.5){
                 uitslag = "Onvoldoende";
