@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 public class h10_PO extends Applet {
     TextField tekstvak;
     int cijfer;
-    String antwoordTekst;
+    String antwoord;
     boolean teGroot;
 
 
@@ -24,7 +24,7 @@ public class h10_PO extends Applet {
     }
     public void paint(Graphics g){
         if (teGroot=true){
-            g.drawString(antwoordTekst + "", 50,80);
+            g.drawString(antwoord + "", 50,80);
         }
 
     }
@@ -34,20 +34,20 @@ public class h10_PO extends Applet {
             cijfer = Integer.parseInt(tekstvak.getText());
             teGroot = false;
             if (cijfer>3) {
-                antwoordTekst = "onvoldoende";
+                antwoord = "onvoldoende";
             }else {
-                antwoordTekst = "slecht";
+                antwoord = "slecht";
             }if (cijfer>4) {
-                antwoordTekst = "matig";
+                antwoord = "matig";
             }if (cijfer>5) {
-                antwoordTekst = "voldoende";
+                antwoord = "voldoende";
             }else if (cijfer==5) {
-                antwoordTekst = "matig";
+                antwoord = "matig";
             }if (cijfer>7) {
-                antwoordTekst = "goed";
+                antwoord = "goed";
             }if (cijfer>10) {
                 teGroot = true;
-                antwoordTekst = "Het cijfer kan niet groter dan 10.";
+                antwoord = "Het cijfer kan niet groter dan 10.";
             }
             repaint();
 
