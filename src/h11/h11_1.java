@@ -7,22 +7,16 @@ public class h11_1 extends Applet {
 
 public void init(){
 
-    setSize(200,300);
+    setSize(350,250);
 
 }
 
-public void paint(Graphics g){
+    public void paint(Graphics g) {
+        int y = 0;
 
-    g.drawLine(119, 170, 119, 90);
-    g.drawLine(123,170,123,90);
-    g.drawLine(127,170,127,90);
-    g.drawLine(131,170,131,90);
-    g.drawLine(135,170,135,90);
-    g.drawLine(139,170,139,90);
-    g.drawLine(143,170,143,90);
-    g.drawLine(147,170,147,90);
-    g.drawLine(151,170,151,90);
-    g.drawLine(155,170,155,90);
-
-}
+        for (int teller = 0; teller < 10; teller++) {
+            y += 20;
+            g.drawLine(50, y, 300, y);
+        }
+    }
 }
